@@ -22,9 +22,10 @@
     // //Store informations in the DB
     $sql_req = "INSERT INTO `ETUDIANT_TEST` (nom, prenoms, date_naissance, genre, type_bac, maths_classe, physique_classe, svt_classe, maths_bac, physique_bac, svt_bac, pays, quartier, lycee) VALUES ('$nom', '$prenoms', '$date_naissance', '$genre', '$type_bac', '$maths_classe', '$physique_classe', '$svt_classe', '$maths_bac', '$physique_bac', '$svt_bac', '$pays', '$quartier', '$lycee')";
     
-    mysqli_query($con, $sql_req);
+    if(mysqli_query($con, $sql_req)) {
+        echo ("finished");
+    }
     // if(!mysqli_query($con, $sql_req)) echo "failed";
     mysqli_close($con);
-    echo ("finished");
     
-?>
+    ?>
