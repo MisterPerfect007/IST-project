@@ -6,6 +6,11 @@
         $login="vrmmONs08e";
         $pass="cH8KOkpe6h";
         $db_name = "vrmmONs08e";
+
+        // $server="localhost";
+        // $login="root";
+        // $pass="";
+        // $db_name = "vrmmONs08e";
     
         $con = mysqli_connect($server, $login, $pass, $db_name);
         
