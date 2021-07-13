@@ -175,6 +175,7 @@
 	);
 
 		while($row = mysqli_fetch_assoc($result)) {
+			echo "ok";
 			if($row['force_faiblesse'] == 1){
 				$result_json['forces'][] = $row;
 			}
@@ -182,6 +183,7 @@
 				$result_json['faiblesses'][] = $row;
 			}
 		}
+		echo json_encode($result_json);
 		// echo '<pre>';
 		echo "function fetchData\n";
 		return structureData($result_json);
