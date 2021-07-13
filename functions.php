@@ -183,7 +183,7 @@
 			}
 		}
 		// echo '<pre>';
-		echo structureData($result_json);
+		echo "function fetchData\n";
 		return structureData($result_json);
 		// echo '</pre>';
 	}
