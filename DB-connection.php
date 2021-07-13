@@ -2,10 +2,10 @@
 
 
  	function connectDB() {
-        $server="remotemysql.com";
-        $login="vrmmONs08e";
-        $pass="cH8KOkpe6h";
-        $db_name = "vrmmONs08e";
+        $server="sql11.freemysqlhosting.net";
+        $login="sql11424844";
+        $pass="F5CEjJWSNf";
+        $db_name = "sql11424844";
 
         // $server="localhost";
         // $login="root";
