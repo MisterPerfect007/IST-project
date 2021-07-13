@@ -183,6 +183,7 @@
 			}
 		}
 		// echo '<pre>';
+		echo structureData($result_json);
 		return structureData($result_json);
 		// echo '</pre>';
 	}
