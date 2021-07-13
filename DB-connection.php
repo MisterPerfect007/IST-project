@@ -18,6 +18,7 @@
             echo "yes";
             return $con;
         }else {
+            echo "no";
             die("Erreur de connection à la base de donnée : ".mysqli_connect_error());
         }
     }	
