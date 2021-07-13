@@ -6,6 +6,6 @@
     require_once('functions.php');
 
     // echo 'bonjour';
-    echo fetchData();
+    echo json_encode(fetchData());
 
 ?>
