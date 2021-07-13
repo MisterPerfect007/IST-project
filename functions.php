@@ -183,7 +183,7 @@
 				$result_json['faiblesses'][] = $row;
 			}
 		}
-		echo ("\nresult = "."<pre>".$result_json."</pre>"." result");
+		echo ("\nresult = "."<pre>".json_encode($result_json)."</pre>"." result");
 		// echo '<pre>';
 		echo "function fetchData\n";
 		return structureData($result_json);
