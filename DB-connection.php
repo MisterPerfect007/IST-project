@@ -11,9 +11,9 @@
         // $login="root";
         // $pass="";
         // $db_name = "vrmmONs08e";
-    
+        echo "connect";
         $con = mysqli_connect($server, $login, $pass, $db_name);
-        
+        echo "connect finished";
         if ($con){
             echo "yes";
             return $con;

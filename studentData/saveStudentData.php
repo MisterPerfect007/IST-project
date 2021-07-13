@@ -26,7 +26,7 @@
     
     if(mysqli_query($con, $sql_req)) {
         echo ("finished");
-    }
+    }else echo "no";
     // if(!mysqli_query($con, $sql_req)) echo "failed";
     mysqli_close($con);
     
