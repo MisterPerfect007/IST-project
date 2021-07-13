@@ -15,6 +15,7 @@
         $con = mysqli_connect($server, $login, $pass, $db_name);
         
         if ($con){
+            echo "yes";
             return $con;
         }else {
             die("Erreur de connection à la base de donnée : ".mysqli_connect_error());
