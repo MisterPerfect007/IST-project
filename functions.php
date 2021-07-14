@@ -182,6 +182,7 @@
 			}
 		}
 			echo json_encode(structureData($result_json));
+			mysqli_close($con);
 	}
  	
  
