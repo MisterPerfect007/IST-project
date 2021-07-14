@@ -11,14 +11,11 @@
         // $login="root";
         // $pass="";
         // $db_name = "vrmmONs08e";
-        echo "connect";
         $con = mysqli_connect($server, $login, $pass, $db_name);
-        echo "connect finished";
+        // mysqli_query($con, "SET NAMES 'utf8'");
         if ($con){
-            echo "yes";
             return $con;
         }else {
-            echo "no";
             die("Erreur de connection à la base de donnée : ".mysqli_connect_error());
         }
     }	
