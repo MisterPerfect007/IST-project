@@ -175,10 +175,12 @@
 	);
 		while($row = mysqli_fetch_assoc($result)) {
 			if($row['force_faiblesse'] == 1){
-				$result_json['forces'][] = array_map("utf8_encode", $row);
+				$result_json['forces'][] =  $row;
+				// array_map("utf8_encode", )
 			}
 			else {
-				$result_json['faiblesses'][] = array_map("utf8_encode", $row);
+				$result_json['faiblesses'][] =  $row;
+				// array_map("utf8_encode", )
 			}
 		}
 			echo json_encode(structureData($result_json));
