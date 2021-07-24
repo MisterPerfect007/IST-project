@@ -7,7 +7,8 @@
 
     //Take the informations 
     $nom = strval($_POST["nom"]);
-    $prenoms = strval($_POST["prenoms"]);
+    // echo $nom;
+    $prenoms = ($_POST["prenoms"]);
     // $date_naissance = $_POST["date_naissance"];
     $genre = strval($_POST["genre"]);
     $numero = strval($_POST["numero"]);
@@ -23,11 +24,14 @@
     $quartier = strval($_POST["quartier"]);
     $lycee = strval($_POST["lycee"]);
     // //Store informations in the DB
+    mysqli_query($con, 'SET NAMES utf8');
     $sql_req = "INSERT INTO `ETUDIANT_TEST` (nom, prenoms, genre, numero, type_bac, annee_bac, pays, quartier, lycee) VALUES ('$nom', '$prenoms', '$genre', '$numero', '$type_bac', '$annee_bac', '$pays', '$quartier', '$lycee')";
     
     if(mysqli_query($con, $sql_req)) {
         echo ("finished");
-    }else echo "no";
+    }else {
+        echo mysqli_error($con);
+    };
     // if(!mysqli_query($con, $sql_req)) echo "failed";
     mysqli_close($con);
     
