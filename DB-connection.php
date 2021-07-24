@@ -2,10 +2,10 @@
 
 
  	function connectDB() {
-        $server="remotemysql.com";
-        $login="vrmmONs08e";
-        $pass="cH8KOkpe6h";
-        $db_name = "vrmmONs08e";
+        $server="173.214.162.58";
+        $login="st11917";
+        $pass="S%kY?Z8w";
+        $db_name = "st11917_ist-success";
 
         // $server="localhost";
         // $login="root";
@@ -14,6 +14,7 @@
         $con = mysqli_connect($server, $login, $pass, $db_name);
         // mysqli_query($con, "SET NAMES 'utf8'");
         if ($con){
+            // echo "Good connection";
             return $con;
         }else {
             die("Erreur de connection à la base de donnée : ".mysqli_connect_error());

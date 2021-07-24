@@ -165,7 +165,7 @@
 		require_once('DB-connection.php');
 		$con = connectDB();
 		$sql = "SELECT nomQualificatif, force_faiblesse, idPersonnalite, `description` FROM Qualificatifs";
-		$result = mysqli_query($con, $sql);
+		$result = mysqli_query($con, $sql) or die(mysqli_error($con));
 
 		$result_json = array(
 			'forces' => array(
@@ -175,11 +175,12 @@
 	);
 		while($row = mysqli_fetch_assoc($result)) {
 			if($row['force_faiblesse'] == 1){
-				$result_json['forces'][] =  $row;
+				// echo var_dump($row);
+				$result_json['forces'][] =  array_map("utf8_encode", $row);
 				// array_map("utf8_encode", )
 			}
 			else {
-				$result_json['faiblesses'][] =  $row;
+				$result_json['faiblesses'][] =  array_map("utf8_encode", $row);
 				// array_map("utf8_encode", )
 			}
 		}
