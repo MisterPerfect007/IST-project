@@ -176,11 +176,15 @@
 		while($row = mysqli_fetch_assoc($result)) {
 			if($row['force_faiblesse'] == 1){
 				// echo var_dump($row);
+				$row['nomQualificatif'] = utf8_decode($row['nomQualificatif']);
 				$result_json['forces'][] =  array_map("utf8_encode", $row);
+
 				// array_map("utf8_encode", )
 			}
 			else {
+				$row['nomQualificatif'] = utf8_decode($row['nomQualificatif']);
 				$result_json['faiblesses'][] =  array_map("utf8_encode", $row);
+
 				// array_map("utf8_encode", )
 			}
 		}

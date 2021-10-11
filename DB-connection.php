@@ -14,6 +14,7 @@
         $con = mysqli_connect($server, $login, $pass, $db_name);
         // mysqli_query($con, "SET NAMES 'utf8'");
         if ($con){
+            mysqli_set_charset($con,"utf8");
             // echo "Good connection";
             return $con;
         }else {
