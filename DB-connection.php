@@ -3,7 +3,7 @@
 
  	function connectDB() {
         $server="173.214.162.58";
-        $login="st11917_perfect";
+        $login="st11917_perfect2";
         $pass="BiggerThanLife";
         $db_name = "st11917_ist-success";
 
